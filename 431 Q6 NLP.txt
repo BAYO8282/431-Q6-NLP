@@ -1,0 +1,164 @@
+1. What is the uses of OCR?
+Ans: Optical character recognition (OCR) converts a document-image into text format.
+
+2. What is DIR?
+Ans: Document image retrieval (DIR) is a technique to search image archives using text queries without image-to-text conversion.
+
+3. What is the uses of DLA?
+Ans:  Document layout analysis (DLA) detects and labels homogeneous document regions. The early DLA methods analyzed simple document layouts and incorporated DLA as a secondary preprocessing task.
+
+4. What are the main aspects of DLA that affect the advances in DLA research?
+Ans: The layouts diversity and the evaluation metrics.
+
+5.What are the main tasks of DLA?
+Ans: Physical analysis and logical analyses.
+
+6.  What are the six most common document layouts?
+Ans: Rectangular, Manhattan, non-Manhattan, Multi-column Manhattan, horizontal overlapping, and diagonal overlapping.
+
+7. What are the phases of DLA framework?
+Ans: Preprocessing, analysis parameter estimation, layout analysis, post-processing, and performance evaluation.
+
+8. What does the Preprocessing in DLA framework?
+Ans: Preprocessing designed to transform an input raw document image into a
+method-oriented document image. The preprocessing phase should make sure that the input image meets the analysis pre-requirements.
+
+9. What are the preprocessing procedures?
+Ans: Binarization, de-skewing, and image enhancement.
+
+10. What is model-driven parameters?
+Ans: The model-driven parameters are estimated to fine-tune a DLA model to meet its analysis objectives.
+
+11. What is data-driven parameters?
+Ans: Data-driven parameters are computed using various measurements based on a given data set.
+
+12. What are the layout analysis strategies?
+Ans: Bottom-up, Top-down and Hybrid.
+
+13. What does the Bottom-up strategiy?
+Ans: Bottom-up starts layout analysis at small document-elements such as pixels or connected-components. Then, it merges or groups homogeneous elements to create larger zones.
+
+14. What does the Top-down strategiy?
+Ans: Top-down strategiy splits that large document region into smaller zones such as text-columns based on some homogeneity rules. The top-down analysis stops when there is no more splitting of zones, or some stopping conditions are reached.
+
+15. What is Hybrid strategiy?
+Ans: The combination of bottom-up and top-down strategies is called a hybrid strategy.
+
+16. What does the Post-Processing in DLA framework?
+Ans: Post-Processing improves or generalizes the results of the DLA algorithm to other types of layouts.
+
+17. What is the main purpose of the physical analysis?
+Ans: The main purpose of the physical analysis is to detect a document structure and identify the boundaries of its homogeneous regions.
+
+18. What is the main purpose of the logical analysis?
+Ans: The main purpose of the logical analysis is labeling the detected regions by physical analysis into document elements such as figures, headings, paragraphs, logos, signatures, and the like.
+
+19. What are the main sources of such degradations?
+Ans: Native degradation and Auxiliary degradation.
+
+20. What is the Native degradation and explain the effects?
+Ans: The native degradation is generated due to aging, ink usage, writing style, etc. This type of degradation could lead to layout issues such as text ink-bleeding, show-through, text fading, text-touching, text-spacing or baseline fluctuation. 
+
+21. What is the Auxiliary degradation and explain the effects?
+Ans: The auxiliary degradations are due to external factors such as a scanning-device malfunction, lighting conditions, and document alignment. Such factors may lead to document image skew, blurring, black-edges, and the like. The negative effect of these issues has to be minimized before starting any layout analysis.
+
+22. Explain Projection Profile.
+Ans: Projection Profile computes the sum of all pixel values along the horizontal
+direction to form a vertical profile histogram. Then, the histogram is analyzed to find peaks and valleys. In a typical setting, the peaks represent text-lines, and valleys represent line-gaps.
+
+23. Explain Hough Transform?
+Ans: Hough transform is to perform angular scanning of image pixels and accumulate votes of each scan in Hough space. Then, a candidate line is detected by finding the highest response in the Hough space.
+
+24. How Nearest Neighbor Approach works?
+Ans: The distance relationships among connected components can be utilized to detect and correct document skewn. First, this technique divides a document
+image into small components. Then, it finds all relative neighbors along specific directions.After that, it accumulates the angles of these components in an angular histogram wherethe peak value indicates a document’s skew-angle.
+
+25. What is Cross-correlation method?
+Ans: Cross-correlation method analyzes text lines to detect/correct the skew
+of document images.
+
+26. What is line-fitting method?
+Ans: Line fitting is the process of constructing a straight line that has the best fit to a series of data points.
+
+27. What is Frequency Domain method?
+Ans: Frequency Domain method is among the earliest approaches that applied Fourier transform (FT) to detect/correct document image skew.
+
+28. What is Fourier transform?
+Ans: In mathematical terms, The Fourier Transform is a technique that transforms a signal into its constituent components and frequencies. In data science Fourier transform is widely used in image analysis, edge detection, image filtering, image reconstruction, and image compression.
+
+29. What does the  Peake and Tan’s method?
+Ans:  Peake and Tan’s method determines a
+document skew angle by accumulating local document-blocks’ angles into an angular
+histogram. Although Peake and Tan’s method enhances the computation cost, it loses some accuracy due to inconsistent Fourier transform spectrum from various blocks.
+
+30. What is Gradient method?
+Ans:  A gradient method is an algorithm to solve problems of the form. with the search directions defined by the gradient of the function at the current point. It requires letter-based preprocessing to avoid false detection of document
+skew.
+
+31. What is  binarization process?
+Ans: Binarization process converts a given grayscale image into a binary image using precomputed thresholds.
+
+32. What does the binarization process?
+Ans: Binarization assists the subsequent analysis phases in addressing several analysis tasks such as text-line detection, skew correction, and connected-component estimation. It helps in analyzing complex document challenges such as noise, complex background, uneven illumination, and faint foreground that is often caused by smearing, bleeding through, blurring, aging factors, and so on.
+
+33. What is analysis parameters?
+Ans: Most of the DLA algorithms, either bottom-up or top-down, require analysis parameters to identify the different regions.
+
+34. What is Docstrum algorithm?
+Ans: Docstrum algorithm is among the earliest successful bottom-up algorithms that is based on connected component analysis. It groups connected components (CC) on a polar structure (distance and angle) to derive the final segmentation.
+
+35. What is Fully Convolutional Neural Network?
+Fully Convolutional Neural Network is a network that does not contain any “Dense” layers (as in traditional CNNs) instead it contains 1x1 convolutions that perform the task of fully connected layers (Dense layers).
+
+36. What is Texture-Based Analysis?
+Ans: Texture analysis refers to the characterization of regions in an image by their texture content. Texture analysis attempts to quantify intuitive qualities described by terms such as rough, smooth, silky, or bumpy as a function of the spatial variation in pixel intensities.
+
+37. What is  Run Length Smearing Algorithm?
+Ans: Run Length Smearing Algorithm converts image-background to image-foreground if the number of background pixels between any two consecutive foreground pixels is less than a predefined threshold.
+
+38. What are the main reason for post processing phase?
+Ans: It allows algorithms to reason performance degradation in particular cases.
+Post-processing could be conducted to give an initial proof for future directions.
+It could be used to show method scalability to cover various document layouts with some simple tweaks.
+It could be necessary to compensate for method segmentation limitations.
+
+39. What are the aspects of evaluation process of the DLA algorithms?
+Ans: The evaluation process of the DLA algorithms consists of two aspects: datasets and evaluation metrics.
+
+40. What are the main categories for document datasets?
+Ans: There are three main categories for document datasets: printed, handwritten, and mixed(documents that contain typewritten and handwritten).
+
+41. What is Region-Level Evaluation Framework?
+Ans: The Region-level Evaluation Framework (REF) is a type of DLA method performance evaluation that concentrates on abstract level evaluation. In other words, segmentation errors can be categorized as major and minor.
+
+42. What are the examples of region-based evaluation?
+Ans: The Intersection over Union (IoU) and the frequency weighted (f.w.IoU).
+
+43. What is Customizable Evaluation Framework?
+Ans: Customizable Evaluation Framework (CEF) is designed to give an in-depth performance evaluation of layout analysis.
+
+44. What are the  performs three main steps performed by the CEF?
+Ans: (1) region transformation
+(2) region correspondence
+(3) error qualification and quantification
+
+45. What are the three states of overlapping detect in the combined interval representation?
+Ans: Segmentation interval over nothing
+Segmentation interval over a ground-truth interval
+Nothing over Ground-truth interval
+
+46. How does the merge error happen?
+Ans: Occurs if one segmented result has multiple correspondences to two or more groundtruth regions.
+
+47. How does the split error happen?
+Ans: Occurs if two or more segmented regions have correspondence to only one groundtruth region.
+
+48. How does the miss error happen?
+Ans: A ground-truth region established no correspondence with any segmented results.
+
+49. How does the partial miss(PMiss) error happen?
+Ans: Occurs if a segmented region overlaps partially a ground-truth region.
+
+50. How does the false detection error happen?
+Ans: Occurs if a segmented region established no correspondence with any
+ground-truth region.
